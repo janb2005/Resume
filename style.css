@@ -10,7 +10,6 @@
 body{
     background-color: #CCCCFF;
     margin: 0px;
-    padding: 0px;
     font-size: 16px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 550;
@@ -57,7 +56,7 @@ main{
 }
 
 
-.textflex1{
+.introduction{
     border-width: 5px 0px 0px 7px;
     border-style: solid;
     border-color: #b041b0;
@@ -102,7 +101,7 @@ main{
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.5);
 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
-    color: white;
+    color: rgb(255, 255, 255);
 
     min-height: 640px;
     min-width:  1360px;
@@ -123,12 +122,18 @@ main{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
 }
 
-
-.textflexbox22{
+.sprachkomp{
     padding-top: 50px;
+    width: 350px;
+
 }
 
-.textflexbox222{
+.Kompetenzenliste{
+    padding-left: 30px;
+}
+
+
+.anderekomp{
     padding-top: 50px;
 }
 
@@ -153,15 +158,16 @@ main{
 
 
 .box2{
+    background-color: #00008B;
     justify-content: space-between;
     display: flex;
-    padding-bottom: 100px;
 
     border-top: 5px dashed rgb(93, 64, 152);
     box-shadow: 0px -30px 20px inset rgb(44, 15, 102);
+    height: 300px;
 }
 
-.textflexbox3{
+.Schulweg{
     padding-left: 100px;
     padding-right: 30px;
 }
@@ -177,7 +183,6 @@ main{
 
 .con:hover{
     font-size: 110%;
-    background-color: #b2b2bc;
 }
 
 .con:active{
@@ -186,21 +191,27 @@ main{
 
 .con{
     font-size: 16px; 
-    background-color: hsl(0, 0%, 100%); 
-    color: black; 
+    background-color: hsl(0, 0%, 30%); 
+    color: hsl(0, 0%, 100%); 
     border-radius: 15px;
+    border-width: 5px;
+ 
+}
+
+footer a{
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 
-
 footer{
+    text-align: center;
     box-shadow: 0px -10px 4px rgb(26, 25, 25);
     background-color: rgb(26, 25, 25);
     color: rgb(255, 255, 255);
-    padding: 1em 0px 1em 100px;
+    padding: 5px 0px 20px 100px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 150px;
-
+    margin-top: 120px;
 
 }

@@ -46,8 +46,9 @@ main{
     font-weight: bold;
 }
 
+/*--------------------------------------------------------------------------------*/
 
-.flex1{
+.container1{
     display: flex;
     margin: 100px 300px 100px 200px;
     min-height: 100px;
@@ -55,6 +56,10 @@ main{
     
 }
 
+.container1>*:hover{    
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
 
 .introduction{
     border-width: 5px 0px 0px 7px;
@@ -76,7 +81,7 @@ main{
     overflow-wrap: break-word;
 }
 
-.imgflex1{
+.cat{
     border-width: 5px 5px 5px 5px;
     border-style: solid;
     border-color: #b041b0;
@@ -90,54 +95,54 @@ main{
     min-height: 385;
 }
 
+/*--------------------------------------------------------------------------------*/
+
 .box{
-    background-color: #00008B;
+    background-color: hsl(240, 100%, 27%);
     width: 1360px;
 
     border-right: 10px none;
     border-top-right-radius: 20px;
 
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.5);
-
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
     color: rgb(255, 255, 255);
-
-    min-height: 640px;
-    min-width:  1360px;
 }
 
-.box h2{
+#container2h{
     text-align: center;
-    display: block;
-    width: 100%;
+    align-self: flex-start;
+    flex-basis: 100%;
 }
 
-.box1{
-    justify-content: space-between;
-    box-shadow: 0px 10px 20px inset rgb(111, 63, 207);
-    border-top: 10px solid rgb(102, 55, 198);
-    border-top-right-radius: 20px;
-
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
-}
-
-.Kompetenzen{
-    padding-left: 50px;
-    padding-right: 50px;
+.container2{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+    box-shadow: 0px 10px 20px inset rgb(72, 4, 206);
+    border-top: 10px solid rgb(49, 20, 194);
+    border-top-right-radius: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
+    padding-right: 50px;
+    padding-bottom: 30px;
 }
 
-
-.Kompetenzen >*{
-    margin-right: 60px;
-    padding-bottom: 50px;
+.container2>*:hover:not(:first-child){    
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
-.Kompetenzenliste{
-    padding-left: 30px;
+.container2>*:not(:first-child){
+    background-color: hsl(240, 100%, 23%);
+    border-radius: 25px;
+    padding: 10px;
 }
 
-
+.Kompetenzenliste li{
+    margin: 20px;
+}
 
 #git:hover{
     font-size: 1em;
@@ -156,62 +161,86 @@ main{
     margin-left: 0px;
     border-width: 5px;
     border-color: rgb(110, 62, 206);
+    margin-left: 170px;
 }
 
 
-.box2{
-    background-color: #00008B;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
+.container3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-end;
 
     border-top: 5px dashed rgb(93, 64, 152);
-    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-.Schulweg{
+.container3>*:hover:not(:first-child){    
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+#container3h{
+    text-align: center;
+    align-self: flex-start;
+    flex-basis: 100%;
+}
+
+.container3 >*:not(:first-child){
+    background-color: hsl(240, 100%, 23%);
+    border-radius: 25px;
+    padding: 20px 30px 10px 30px;
+    width: 35%;
+}
+
+.Abschluss li{
+    margin-bottom: 20px;
+}
+
+.container4{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+    padding-top: 20px;
+    padding-bottom: 100px;
+    border-top: 5px dashed rgb(93, 64, 152);
+    box-shadow: 0px -30px 20px inset hsl(239, 89%, 19%);
 }
 
-.Schulweg >*:not(:last-child){
-    padding-left: 200px;
-    padding-right: 50px;
-    margin-right: 200px;
+.container4>*:hover:not(:first-child){    
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
+#container4h{
+    text-align: center;
+    align-self: flex-start;
+    flex-basis: 100%;
+}
 
-.img2{
-    display: flex;
-    margin-top: 40px;
-    padding-left: 0px;
+.whcare{
     border: 6px solid rgb(110, 62, 206);
     box-shadow: 2px 2px 10px rgb(40, 20, 81);
-    height: 75px;
+    height: 100px;
+    margin-right: 300px;
+    align-self: center;
 }
 
-.box3{
-    text-align: center;
-    background-color: #00008B;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
-
-    border-top: 5px dashed rgb(93, 64, 152);
-    box-shadow: 0px -30px 20px inset rgb(44, 15, 102);
-    height: 300px;
+.container4 .praktischeerf{
+    background-color: hsl(240, 100%, 23%);
+    border-radius: 25px;
+    padding: 20px 30px 10px 30px;
+    width: 35%;
+    margin-left: 400px;
 }
 
-.s
 
-.praktischeerf{
-    display: flex;
-}
 
-.img2{
-    display: flex;
-    float: right;
+/*--------------------------------------------------------------------------------*/
 
-}
 .con:hover{
     font-size: 110%;
 }

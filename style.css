@@ -277,22 +277,6 @@ footer{
     margin-top: 10px;
 }
 
-@keyframes slideLeft{
-    from {
-        transform: translateX(-220vh);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 
-@keyframes slideUp{
-    from {
-        transform: translateY(220vh);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
 
 

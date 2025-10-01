@@ -32,8 +32,6 @@ header{
     box-shadow: 2px -1px 20px rgb(123, 90, 188), 0px 30px 20px inset rgb(80, 45, 150), -0px -30px 20px inset rgb(43, 15, 98);
     display: block;
     width: 100%;
-
-    animation: slideLeft 0.9s ease-in-out 0s 1 forwards;
 }
 main{
     background-color: #CCCCFF;
@@ -51,8 +49,6 @@ main{
     margin: 100px 300px 100px 200px;
     min-height: 100px;
     min-width: 500px;   
-    
-    animation: slideUp 2s ease-in-out 0s 1 normal forwards;
 }
 
 .container1>*:hover:not(:last-child){    
@@ -106,8 +102,6 @@ main{
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
     color: rgb(255, 255, 255);
-
-    animation: slideLeft 4s ease-in-out 0s 1 normal forwards;
 }
 
 #container2h{

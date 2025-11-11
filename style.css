@@ -7,8 +7,21 @@
     background-color: hsl(0, 0%, 0%);
 }
 
+:root{
+    --bg: #CCCCFF;
+    --panel: #102A43;
+    --panel-2: #1B4965;
+    --accent: #1b4965a2;    
+    --text-on-dark: #FFFFFF; 
+    --text-on-light: #1F2933;
+    --muted: #E6EEF3;        
+    --shadow: rgba(16, 42, 67, 0.45);
+    --shadow-lg: rgba(16,42,67,0.55);
+    --shadow-inset: rgba(27,73,101,0.25);
+}
+
 body{
-    background-color: #CCCCFF;
+    background-color: var(--bg);
     margin: 0px;
     font-size: 16px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -23,13 +36,13 @@ body{
 header{
     text-align: left;
     text-shadow: -2px -2px 4px hsl(0, 0%, 59%), 4px 4px 6px rgba(0, 0, 0, 0.6);
-    color: white;
+    color: var(--text-on-dark);
     margin-top: 50px;
-    background-color: #4b0082;
+    background-color: var(--panel-2);
     padding: 1em 0px 1em 100px;
-    border-bottom: 8px solid rgb(43, 15, 98);
-    border-top: 8px solid rgb(80, 45, 150);
-    box-shadow: 2px -1px 20px rgb(123, 90, 188), 0px 30px 20px inset rgb(80, 45, 150), -0px -30px 20px inset rgb(43, 15, 98);
+    border-bottom: 8px solid var(--panel);
+    border-top: 8px solid var(--panel-2);
+    box-shadow: 2px -1px 20px var(--shadow-lg), 0px 30px 20px inset var(--shadow-inset), -0px -30px 20px inset var(--shadow-inset);
     display: block;
     width: 100%;
 }
@@ -50,6 +63,10 @@ main{
     min-height: 100px;
     min-width: 500px;   
 }
+.container1 > a {
+    align-self: flex-end;
+    display: block;
+}
 
 .container1>*:hover:not(:last-child){    
     transform: scale(1.05);
@@ -59,12 +76,12 @@ main{
 .introduction{
     border-width: 5px 0px 0px 7px;
     border-style: solid;
-    border-color: #b041b0;
+    border-color: var(--panel-2);
     color: white;
     border-radius: 10px;
 
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), 10px 10px 20px inset #b847b8, 0px -10px 20px inset #481448;
-    background-color: #800080;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35), 10px 10px 20px inset var(--shadow-inset), 0px -10px 20px inset var(--shadow-inset);
+    background-color: var(--panel-2);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
     padding: 20px;
     
@@ -79,29 +96,31 @@ main{
 .cat{
     border-width: 5px 5px 5px 5px;
     border-style: solid;
-    border-color: #b041b0;
+    border-color: var(--panel-2);
     border-radius: 20px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 20px var(--shadow);
     
-    height: 385px;
+    height: 200px;
+    max-height: 200px;
     width: auto;
-    margin-left: 70px;
-    min-width: auto;
-    min-height: 385;
+    max-width: 240px;
+    margin-left: 40px;
+    min-width: 0;
+    align-self: flex-end;
 }
 
 /*--------------------------------------------------------------------------------*/
 
 .box{
-    background-color: hsl(240, 100%, 27%);
+    background-color: var(--panel);
     width: 1360px;
 
     border-right: 10px none;
     border-top-right-radius: 20px;
 
-    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 10px 20px var(--shadow-lg);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
-    color: rgb(255, 255, 255);
+    color: var(--text-on-dark);
 }
 
 #container2h{
@@ -116,8 +135,8 @@ main{
     flex-wrap: wrap;
 
 
-    box-shadow: 0px 10px 20px inset rgb(72, 4, 206);
-    border-top: 10px solid rgb(49, 20, 194);
+    box-shadow: 0px 10px 20px inset var(--shadow-inset);
+    border-top: 10px solid var(--panel-2);
     border-top-right-radius: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
     padding-right: 50px;
@@ -131,7 +150,7 @@ main{
 .container2>*:hover:not(:first-child){    
     transform: scale(1.05);
     transition: transform 0.2s;
-    background-color: hsl(240, 100%, 23%);
+    background-color: var(--panel-2);
     border-radius: 25px;
     padding: 10px;
 }
@@ -151,13 +170,13 @@ main{
 
 #git{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px rgba(255, 255, 255, 0.07);
-    color:white;
-    background-color: rgb(94, 74, 168);
+    color: var(--text-on-dark);
+    background-color: var(--accent);
     border-radius: 20px;
     font-size: 14px;
     margin-left: 0px;
     border-width: 5px;
-    border-color: rgb(110, 62, 206);
+    border-color: var(--panel-2);
     margin-left: 150px;
 }
 
@@ -177,10 +196,9 @@ main{
 .container3>*:hover:not(:first-child){    
     transform: scale(1.05);
     transition: transform 0.2s;
-    background-color: hsl(240, 100%, 23%);
+    background-color:  var(--panel-2);
     border-radius: 25px;
     padding: 10px;
-
 }
 
 #container3h{
@@ -202,13 +220,13 @@ main{
     padding-top: 20px;
     padding-bottom: 100px;
     border-top: 5px dashed rgb(93, 64, 152);
-    box-shadow: 0px -30px 20px inset hsl(239, 89%, 19%);
+    box-shadow: 0px -30px 20px inset var(--shadow-inset);
 }
 
 .container4 :hover.praktischeerf{    
     transform: scale(1.05);
     transition: transform 0.2s;
-    background-color: hsl(240, 100%, 23%);
+    background-color:  var(--panel-2);
     border-radius: 25px;
     padding: 10px;
 }
@@ -220,8 +238,8 @@ main{
 }
 
 .whcare{
-    border: 6px solid rgb(110, 62, 206);
-    box-shadow: 2px 2px 10px rgb(40, 20, 81);
+    border: 6px solid var(--panel-2);
+    box-shadow: 2px 2px 10px var(--shadow);
     height: 100px;
     margin-right: 300px;
     align-self: center;
@@ -232,8 +250,6 @@ main{
     margin-left: 500px;
     padding-top: 20px;
 }
-
-
 
 /*--------------------------------------------------------------------------------*/
 
@@ -247,11 +263,10 @@ main{
 
 .con{
     font-size: 16px; 
-    background-color: hsl(0, 0%, 30%); 
-    color: hsl(0, 0%, 100%); 
+    background-color: var(--panel-2); 
+    color: var(--text-on-dark); 
     border-radius: 15px;
     border-width: 5px;
- 
 }
 
 footer a{
@@ -262,13 +277,24 @@ footer a{
 
 footer{
     text-align: center;
-    box-shadow: 0px -10px 4px rgb(26, 25, 25);
-    background-color: rgb(26, 25, 25);
-    color: rgb(255, 255, 255);
+    box-shadow: 0px -10px 4px var(--shadow);
+    background-color: var(--panel);
+    color: var(--text-on-dark);
     padding: 5px 0px 20px 100px;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .cat{
+        height: 140px;
+        max-height: 140px;
+        max-width: 200px;
+        margin-left: 0;
+        display: block;
+        margin: 18px auto;
+    }
 }
 
 
